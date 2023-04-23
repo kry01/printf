@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			len = specifier(format, args, len);
+			len += specifier(format, args, len);
 			format++;
 		}
 		else
