@@ -18,6 +18,12 @@ int specifier(const char *format, va_list args, int len)
 		case 's':
 			len = print_s(args);
 			break;
+		case 'd':
+			len = print_int(args, 0);
+			break;
+		case 'i':
+			len = print_int(args, 0);
+			break;
 		case '%':
 			write(1, "%", 1);
 			len++;
