@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
-*
-*/
+ * print_c - print char.
+ * @args: char to print.
+ * Return: 1.
+ */
 
 int print_c(va_list args)
 {
