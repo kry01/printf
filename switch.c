@@ -8,7 +8,7 @@
  * Return: return length.
  */
 
-int spicifier(const char *format, va_list args, int len)
+int specifier(const char *format, va_list args, int len)
 {
 	switch (*format)
 	{
