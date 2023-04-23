@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
-*
+*print_s - prints a string
+*@args: string to print
+*Return: number of characters printed
 */
 
 int print_s(va_list args)
@@ -13,5 +15,5 @@ int print_s(va_list args)
 		len++;
 
 	write(1, str, len);
-	return(len);
+	return (len);
 }
