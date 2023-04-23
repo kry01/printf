@@ -23,12 +23,12 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			while (format[len])
-				len++;
-			write(1, format, len);
+			_putchar(*format);
 			format++;
+			len++;
 		}
 	}
 	va_end(args);
-	retrun(len);
+
+	return (len);
 }

@@ -19,7 +19,7 @@ int specifier(const char *format, va_list args, int len)
 			len = print_s(args);
 			break;
 		case '%':
-			write(1, '%', 1);
+			write(1, "%", 1);
 			break;
 		default:
 			break;
