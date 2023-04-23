@@ -13,8 +13,7 @@ int specifier(const char *format, va_list args, int len)
 	switch (*format)
 	{
 		case 'c':
-			_putchar(va_arg(args, int));
-			len++;
+			len = print_c(args);
 			break;
 		case 's':
 			len = print_s(args);
