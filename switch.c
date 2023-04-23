@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * spicifier - spisifie the character.
+ * specifier - specifies the character.
  * @format: format.
  * @args: string to print.
  * @len: length of the string.
