@@ -1,25 +1,16 @@
 #include "main.h"
 
 /**
- * print_int - prints an integer.
- * only using the putchar function.
- * noarrays and pointers.
+ * print_u - prints an positive integer.
  * @args: integer to be printed.
  * Return: void.
  */
 
-int print_int(va_list args)
+int print_u(va_list args)
 {
 	long int n = va_arg(args, int);
 	long int num = n;
-	int dg, dgs = 0, counter = 0;
-
-	if (n < 0)
-	{
-		counter += _putchar('-');
-		n = n * -1;
-		num = n;
-	}
+	int dgs = 0, dg, counter = 0;
 
 	do {
 		dgs++;
