@@ -8,8 +8,8 @@
 
 int print_u(va_list args)
 {
-	long int n = va_arg(args, int);
-	long int num = n;
+	unsigned int n = va_arg(args, unsigned int);
+	unsigned int num = n;
 	int dgs = 0, dg, counter = 0;
 
 	do {
