@@ -3,7 +3,7 @@
 /**
  * print_x - function to convert positive number to hex code.
  * @args: number.
- *
+ * @is_upper: 1 -> X and 0 -> x.
  * Return: length.
  */
 
