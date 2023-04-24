@@ -34,6 +34,7 @@ int main(void)
 
     len = _printf("%d", NULL);
     printf(" ---- : %d\n", len);
+    printf("%d", NULL);
     
     return (0);
 }
