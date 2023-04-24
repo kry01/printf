@@ -11,15 +11,15 @@
 
 int print_int(va_list args, int counter)
 {
-	int num = va_arg(args, int);
+	long int num = va_arg(args, int);
 	int digits = 0;
-	int temp = num;
+	long int temp = num;
 	int digit;
 
 	if (num < 0)
 	{
 		counter += _putchar('-');
-		num = -num;
+		num = num * -1;
 		temp = num;
 	}
 
