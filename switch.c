@@ -29,6 +29,8 @@ int specifier(const char *format, va_list args, int len)
 			len = 1;
 			break;
 		default:
+			write(1, "%", 1);
+			len = 1;
 			break;
 	}
 	return (len);

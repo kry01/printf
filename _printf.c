@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 			len += specifier(format, args, len);
 			format++;
 		}
+
 		else
 		{
 			_putchar(*format);

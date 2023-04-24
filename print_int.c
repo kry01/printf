@@ -11,36 +11,36 @@
 
 int print_int(va_list args, int counter)
 {
-	long int num = va_arg(args, int);
-	int digits = 0;
-	long int temp = num;
-	int digit;
+	long int n = va_arg(args, int);
+	int dgs = 0;
+	long int num = n;
+	int dg;
 
-	if (num < 0)
+	if (n < 0)
 	{
 		counter += _putchar('-');
-		num = num * -1;
-		temp = num;
+		n = n * -1;
+		num = n;
 	}
 
 	do {
-		digits++;
-		temp /= 10;
-	} while (temp != 0);
+		dgs++;
+		num /= 10;
+	} while (num != 0);
 
-	while (digits > 0)
+	while (dgs > 0)
 	{
 		int pow10 = 1;
 		int i;
 
-		for (i = 1; i < digits; i++)
+		for (i = 1; i < dgs; i++)
 		{
 			pow10 *= 10;
 		}
-		digit = num / pow10;
-		counter += _putchar(digit + '0');
-		num -= digit * pow10;
-		digits--;
+		dg = n / pow10;
+		counter += _putchar(dg + '0');
+		n -= dg * pow10;
+		dgs--;
 	}
 	return (counter);
 }
