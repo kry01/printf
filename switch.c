@@ -30,7 +30,8 @@ int specifier(const char *format, va_list args, int len)
 			break;
 		default:
 			write(1, "%", 1);
-			len = 1;
+			_putchar(*format);
+			len = 2;
 			break;
 	}
 	return (len);

@@ -65,5 +65,7 @@ int main(void)
 	b = _printf("Current output:     %i\n", INT_MIN);
 	printf("Expected length:    %i\n", a);
 	printf("Current length:     %i\n", b);
+	a = printf("");
+	printf("%i\n", a);
 	return (0);
 }

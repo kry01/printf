@@ -14,9 +14,6 @@ int print_s(va_list args)
 	if (str == NULL || str == 0)
 		return (write(1, "(null)", 6));
 
-	if (*str == '\0')
-		return (write(1, "(null)", 6));
-
 	while (str[len])
 		len++;
 

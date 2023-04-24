@@ -91,5 +91,7 @@ int main(void)
 	printf("\n");
 	printf("Expected length:    %d\n", a);
 	printf("Current length:     %d\n", b);
+	a = printf("%");
+	printf("%i\n", a);
 	return (0);
 }
