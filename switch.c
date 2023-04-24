@@ -24,6 +24,9 @@ int specifier(const char *format, va_list args, int len)
 		case 'i':
 			len = print_int(args, 0);
 			break;
+		case 'b':
+			len = print_b(args);
+			break;
 		case '%':
 			write(1, "%", 1);
 			len = 1;
