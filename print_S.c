@@ -1,40 +1,35 @@
 #include "main.h"
 
 /**
- * _hex - convert a char to hex code.
- * @str: the char to convert.
- *
- * Return: length of the hex.
+ *print_ch - prints a single character to stdout
+ *@c: character to print
+ *@len: length
+ *Return: len
  */
-int _hex(char str)
+int print_ch(char c, int len)
 {
-	unsigned int n = str;
-	int i = 0, j, len = 0, hnum[100], rmd;
+	write(1, &c, 1);
+	len++;
+	return (len);
+}
 
-	if (n == 0)
+/**
+ * print_str - prints a string to stdout
+ *@str: string to print
+ *@len: the counter
+ *Return: len
+ */
+int print_str(char *str, int len)
+{
+	if (str == NULL || str == 0)
 	{
-		_putchar('0');
-		return (1);
+		return (print_str("(null)", len));
 	}
-
-	while (n > 0)
+	while (*str)
 	{
-		rmd = n % 16;
-
-		if (rmd < 10)
-			hnum[i] = 48 + rmd;
-		else
-			hnum[i] = 65 + (rmd - 10);
-		i++;
-		n /= 16;
+		len = print_ch(*str, len);
+		str++;
 	}
-
-	for (j = i - 1; j >= 0; j--)
-	{
-		_putchar(hnum[j]);
-		len++;
-	}
-
 	return (len);
 }
 
@@ -48,31 +43,26 @@ int _hex(char str)
 int print_S(va_list args)
 {
 	char *str = va_arg(args, char *);
-	int len = 0, i = 0;
+	int len = 0;
 
-	if (str == 0)
-		return (write(1, "(null)", 6));
-
-	while (str[i])
+	if (str == NULL || str == 0)
 	{
-		if ((str[i] > 0 && str[i] < 32) || str[i] >= 127)
+		return (print_str("(null)", len));
+	}
+	while (*str)
+	{
+		if (*str < 32 || *str >= 127)
 		{
-			_putchar('\\');
-			_putchar('x');
-
-			if (str[i] <= 15)
-				_putchar('0');
-
-			len += 2;
-			len += _hex(str[i]);
+			len = print_ch('\\', len);
+			len = print_ch('x', len);
+			len = print_ch((*str / 16) + '0', len);
+			len = print_ch((*str % 16) + ((*str % 16 < 10) ? '0' : 'A' - 10), len);
 		}
 		else
 		{
-			_putchar(str[i]);
-			len++;
+			len = print_ch(*str, len);
 		}
-		i++;
+		str++;
 	}
-
 	return (len);
 }
