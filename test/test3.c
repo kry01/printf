@@ -42,9 +42,7 @@ int main(void)
 	/* ========================= */
 	/* 			%i CASES		 */
 	/* ========================= */
-	printf("======================\n");
-	printf("****** i CASES ******\n");
-	printf("======================\n");
+	
 	a = printf("Expected output:    %i\n", 237482);
 	b = _printf("Current output:     %i\n", 237482);
 	printf("Expected length:    %i\n", a);
@@ -58,9 +56,6 @@ int main(void)
 	printf("Expected length:    %i\n", a);
 	printf("Current length:     %i\n", b);
 	intf("Expected length:    %d\n", a);
-	printf("Current length:     %d\n", b);
-	a = printf("Expected output:    %d\n", INT_MIN);
-	b = _printf("Current output:     %d\n", INT_MIN);intf("Expected length:    %d\n", a);
 	printf("Current length:     %d\n", b);
 	a = printf("Expected output:    %d\n", INT_MIN);
 	b = _printf("Current output:     %d\n", INT_MIN);intf("Expected length:    %d\n", a);
