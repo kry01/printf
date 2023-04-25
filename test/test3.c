@@ -38,6 +38,14 @@ int main(void)
 	b = _printf("Current output:     %d\n", INT_MIN);
 	printf("Expected length:    %d\n", a);
 	printf("Current length:     %d\n", b);
+	a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);
+	a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);
+	a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);
+	a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);
 
 	/* ========================= */
 	/* 			%i CASES		 */
