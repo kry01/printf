@@ -51,7 +51,11 @@ int main(void)
 	/* 			%i CASES		 */
 	/* ========================= */
 	
-	
+	a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);
 	printf("Current length:     %i\n", b);
 	a = printf("Expected output:    %i\n", -328472);
 	b = _printf("Current output:     %i\n", -328472);
