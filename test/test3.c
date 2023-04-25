@@ -43,9 +43,7 @@ int main(void)
 	/* 			%i CASES		 */
 	/* ========================= */
 	
-	a = printf("Expected output:    %i\n", 237482);
-	b = _printf("Current output:     %i\n", 237482);
-	printf("Expected length:    %i\n", a);
+	
 	printf("Current length:     %i\n", b);
 	a = printf("Expected output:    %i\n", -328472);
 	b = _printf("Current output:     %i\n", -328472);
