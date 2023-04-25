@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdint.h>
 
 /**
  * print_p - prints a pointer to an input.
@@ -10,7 +11,7 @@
 int print_p(va_list args)
 {
 	void *p = va_arg(args, void *);
-	unsigned long num = (unsigned long) p, tmp;
+	uintptr_t num = (uintptr_t) p, tmp;
 	int dgs = 0, i, len = 0;
 	char hex_dg[16] = "0123456789abcdef";
 	char hex[16];
