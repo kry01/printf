@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdint.h>
+#include <inttypes.h>
 
 /**
  * print_p - prints a pointer to an input.
@@ -11,17 +11,15 @@
 int print_p(va_list args)
 {
 	void *p = va_arg(args, void *);
-	uintptr_t num = (uintptr_t) p, tmp;
+	uintptr_t num = (uintptr_t)p;
 	int dgs = 0, i, len = 0;
 	char hex_dg[16] = "0123456789abcdef";
 	char hex[16];
 
-	tmp = num;
-
-	while (tmp != 0)
+	while (num != 0)
 	{
 		dgs++;
-		tmp /= 16;
+		num /= 16;
 	}
 	len += _putchar('0');
 	len += _putchar('x');
@@ -29,6 +27,7 @@ int print_p(va_list args)
 		len += _putchar('0');
 	else
 	{
+		num = (uintptr_t)p;
 		for (i = dgs - 1; i >= 0; i--)
 		{
 			int dg = num % 16;
