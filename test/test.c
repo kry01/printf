@@ -23,6 +23,10 @@ int main(void)
 	printf(": %d\n", len);
 	len = _printf("%S\n", "Best\fSchool");
 	printf(": %d\n", len);
+	a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);
+	a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);
 	
 	return (0);
 }
