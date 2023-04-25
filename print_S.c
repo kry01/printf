@@ -49,7 +49,6 @@ int print_S(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int len = 0, i = 0;
-	char s;
 
 	if (str == 0)
 		return (write(1, "(null)", 6));
