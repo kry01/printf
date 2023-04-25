@@ -9,7 +9,7 @@
   */
 int main(void)
 {
-	int len, num = -1;
+	int len, num = 30;
 	len = printf("Decimal: %u\n", num);
       printf(" : %d\n", len);	// Output: Decimal: 255
 	len = printf("Octal: %o\n", num);
