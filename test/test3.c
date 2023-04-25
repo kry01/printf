@@ -90,5 +90,14 @@ int main(void)
 	printf("Current length:     %d\n", b);
 	a = printf("Expected output:    %d\n", INT_MIN);
 	b = _printf("Current output:     %d\n", INT_MIN);
+	a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);
+	a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);
+	a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);
+	a = printf("Expected output:    %d\n", INT_MAX);
+	b = _printf("Current output:     %d\n", INT_MAX);
+	
 	return (0);
 }
