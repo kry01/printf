@@ -23,7 +23,6 @@ int main(void)
 	printf(": %d\n", len);
 	len = _printf("%S\n", "Best\fSchool");
 	printf(": %d\n", len);
-	len = _printf("%S\n", "Best(SPACE)School");
-	printf(": %d\n", len);
+	
 	return (0);
 }
