@@ -61,7 +61,7 @@ int print_S(va_list args)
 			_putchar('\\');
 			_putchar('x');
 
-			if (str[i] >= 10 && str[i] <= 15)
+			if (str[i] <= 15)
 				_putchar('0');
 
 			len += 2;
