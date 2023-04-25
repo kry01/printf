@@ -11,12 +11,14 @@
 int print_p(va_list args)
 {
 	void *p = va_arg(args, void *);
-	uintptr_t num = (uintptr_t)p;
+	uintptr_t num = (uintptr_t)p, tmp;
 	int dgs = 0, i, len = 0;
 	char hex_dg[16] = "0123456789abcdef";
 	char hex[16];
 
-	while (num != 0)
+	tmp = num;
+
+	while (tmp != 0)
 	{
 		dgs++;
 		num /= 16;
@@ -27,7 +29,6 @@ int print_p(va_list args)
 		len += _putchar('0');
 	else
 	{
-		num = (uintptr_t)p;
 		for (i = dgs - 1; i >= 0; i--)
 		{
 			int dg = num % 16;
