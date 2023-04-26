@@ -21,14 +21,15 @@ int print_p(va_list args)
 	while (tmp != 0)
 	{
 		dgs++;
-		num /= 16;
+		tmp /= 16;
 	}
-	len += _putchar('0');
-	len += _putchar('x');
+
 	if (num == 0)
-		len += _putchar('0');
+		write(1, "(nil)", 5);
 	else
 	{
+		len += _putchar('0');
+		len += _putchar('x');
 		for (i = dgs - 1; i >= 0; i--)
 		{
 			int dg = num % 16;
