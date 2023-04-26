@@ -25,7 +25,10 @@ int print_p(va_list args)
 	}
 
 	if (num == 0)
+	{
 		write(1, "(nil)", 5);
+		return (5);
+	}
 	else
 	{
 		len += _putchar('0');
